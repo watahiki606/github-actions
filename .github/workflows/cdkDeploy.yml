@@ -21,11 +21,11 @@ jobs:
         run: cd cdk && npm ci
 
       - name: Build
-        run: npm run build
+        run: cd cdk && npm run build
 
       - name: CDK Diff Check
         if: contains(github.event_name, 'pull_request')
-        run: npm run cdk:diff
+        run: cd cdk && npm run cdk:diff
         env:
           AWS_DEFAULT_REGION: "ap-northeast-1"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -33,7 +33,7 @@ jobs:
 
       - name: CDK Deploy Dev
         if: contains(github.event_name, 'push')
-        run: npm run cdk:deploy-dev
+        run: cd cdk && npm run cdk:deploy-dev
         env:
           AWS_DEFAULT_REGION: "ap-northeast-1"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
