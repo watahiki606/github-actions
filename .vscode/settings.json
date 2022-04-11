@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true, // ファイル保存時にPrettierでフォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.pythonPath": "/usr/local/bin/python",
+  "python.testing.pytestEnabled": true,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": ["tests"],
+  "python.analysis.extraPaths": ["/usr/local/lib/python3.8/site-packages/"],
+  "python.formatting.autopep8Args": [
+    "--ignore",
+    "E402",
+    "--max-line-length",
+    "200"
+  ],
+  "python.linting.flake8Args": ["--ignore=E501, W503", "--exclude"],
+  "[python]": {
+    "editor.defaultFormatter": null
+  },
+  "python.linting.enabled": false,
+  "python.linting.flake8Enabled": true
+}
