@@ -10,7 +10,7 @@
     "test": "jest",
     "cdk": "cdk",
     "cdk:diff": "cdk diff || true",
-    "cdk:deploy-dev": "cdk deploy --profile my --context stage=dev"
+    "cdk:deploy-dev": "cdk deploy --context stage=dev"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
